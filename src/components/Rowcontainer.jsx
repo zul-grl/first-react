@@ -7,6 +7,8 @@ const newsData = [
     summary: "Өнөөдөр нийт нутгаар цас орохгүй, цаг агаар тогтуун байна.",
     time: "2 цагийн өмнө",
     comments: 11,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 2,
@@ -17,6 +19,8 @@ const newsData = [
       "Германы Магдебург хотод өчигдөр буюу 2024 оны 12-р сарын 20-нд болж, Зул сарын зах дээр нэгэн автомашин олон хүнийг дайрч...",
     time: "21 минутын өмнө",
     comments: 0,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 3,
@@ -27,6 +31,8 @@ const newsData = [
       "Ерөнхий сайд Л.Оюун-Эрдэнэ өчигдөр мэдээлэл хийхдээ Эрдэнэс Тавантолгой компанийн 12-р сарын 20-ны байдлаар 4.3 их наяд төгрөгийн ашигтай ажилласан.",
     time: "2 цагийн өмнө",
     comments: 316,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 4,
@@ -37,6 +43,8 @@ const newsData = [
       "Ерөнхий сайд Л.Оюун-Эрдэнэ мэдээлэл хийхдээ Монгол Улсын иргэн бүрд ногдол ашиг олгох тухай дурдсан.",
     time: "Өчигдөр",
     comments: 625,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 5,
@@ -46,6 +54,8 @@ const newsData = [
       "Улаанбаатар хотын төмөр замын төв буудалд шинэчлэлийн ажил хийгдэж, урсдаг зам ашиглалтад орлоо.",
     time: "2024-12-19 16:45",
     comments: 1709,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 6,
@@ -55,6 +65,8 @@ const newsData = [
       "2025 оноос хэрэгжих шинэ хууль, тогтоолуудын талаар дэлгэрэнгүй танилцуулга хүргэж байна.",
     time: "2024-12-19 08:36",
     comments: 156,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 7,
@@ -64,6 +76,8 @@ const newsData = [
       "Цагдаагийн ерөнхий газраас мэдээлснээр Реппер Roockie-г хуулийн дагуу шалгаж байгаа тухай мэдэгдэв.",
     time: "2024-12-19 10:21",
     comments: 98,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 8,
@@ -73,6 +87,8 @@ const newsData = [
       "Улаанбаатар хотын төмөр замын төв буудалд шинэчлэлийн ажил хийгдэж, урсдаг зам ашиглалтад орлоо.",
     time: "2024-12-19 16:45",
     comments: 1709,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 9,
@@ -82,6 +98,8 @@ const newsData = [
       "2025 оноос хэрэгжих шинэ хууль, тогтоолуудын талаар дэлгэрэнгүй танилцуулга хүргэж байна.",
     time: "2024-12-19 08:36",
     comments: 156,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
   {
     homenum: 10,
@@ -91,6 +109,8 @@ const newsData = [
       "Цагдаагийн ерөнхий газраас мэдээлснээр Реппер Roockie-г хуулийн дагуу шалгаж байгаа тухай мэдэгдэв.",
     time: "2024-12-19 10:21",
     comments: 98,
+    image:
+      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
 ];
 const cardarr = [
@@ -136,10 +156,11 @@ const cardarr = [
   },
 ];
 const combinedArray = [...newsData, ...cardarr];
+console.log(combinedArray);
 const Card = ({ image, text, title, number, time }) => {
   return (
     <div className="card2">
-      <div className="card-bg2" style={{ backgroundImage: `url(${image})` }}>
+      <div className="cardbg2" style={{ backgroundImage: `url(${image})` }}>
         <p>{text}</p>
       </div>
       <div>
@@ -195,7 +216,7 @@ const RowContainer = () => {
           }}
         />
 
-        {cardarr.slice(0, 10).map((medee) => (
+        {cardarr.slice(0, 4).map((medee) => (
           <Card
             image={medee.image}
             text={medee.text}

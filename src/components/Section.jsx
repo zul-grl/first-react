@@ -29,7 +29,7 @@ const cardarr = [
 ];
 const Section = () => {
   return (
-    <div style={{backgroundColor:"#f9f9f9"}}>
+    <div style={{ backgroundColor: "#f9f9f9" }}>
       <div className="content">
         <div className="section">
           <div className="health">
@@ -73,7 +73,6 @@ const Section = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       width="13px"
-                      height="auto"
                     >
                       <path
                         fill="#c4c4c4"

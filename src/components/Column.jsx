@@ -1,19 +1,19 @@
-const Column = () => {
+const Column = ({ combinedArray }) => {
   return (
     <div>
       <div>
+        <div>
+          Өнөөдөр
+          <img
+            src="https://mgl.gogo.mn//newsn/v4/images/todaynews.6ba1d8b2.png"
+            alt=""
+            width="23px"
+          />
+        </div>
         {combinedArray.map((props) => {
           return (
             <div>
               <div>
-                <div>
-                  Өнөөдөр
-                  <img
-                    src="https://mgl.gogo.mn//newsn/v4/images/todaynews.6ba1d8b2.png"
-                    alt=""
-                    width="23px"
-                  />
-                </div>
                 <div>
                   <div></div>
                   <div>{props.date}</div>
@@ -47,18 +47,18 @@ const Column = () => {
           );
         })}
       </div>
-      {combinedArray.map((props) => {
-        return (
-          <>
-            <div>
-              <img
-                src="https://mgl.gogo.mn//newsn/v4/images/highlightnews.4812c9a7.png"
-                width="25"
-                alt=""
-                style="height: 30px;"
-              />
-              Онцлох мэдээ
-            </div>
+      <div>
+        <div>
+          <img
+            src="https://mgl.gogo.mn//newsn/v4/images/highlightnews.4812c9a7.png"
+            width="25"
+            alt=""
+            style={{ height: 30 }}
+          />
+          Онцлох мэдээ
+        </div>
+        {combinedArray.slice(0, 10).map((props) => {
+          return (
             <div>
               <div>{props.homenum}</div>
               <div>
@@ -78,9 +78,9 @@ const Column = () => {
                 </div>
               </div>
             </div>
-          </>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

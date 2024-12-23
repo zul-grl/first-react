@@ -80,7 +80,7 @@ const Header = () => {
                     src={props.imgurl}
                     alt=""
                   />
-                  <p1>{props.number}</p1>
+                  <p>{props.number}</p>
                 </div>
               </div>
             ))}
