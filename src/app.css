@@ -5,5 +5,261 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #fff;
+  font: normal 14px / 22px Helvetica Neue, sans-serif, Arial;
+}
+.content {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  padding: 20px 0 40px;
+  justify-content: space-between;
+}
+.headerleft {
+  display: flex;
+  align-items: center;
+  img {
+    width: 119px;
+    height: auto;
+    margin-right: 20px;
+    align-items: center;
+  }
+  div {
+    display: flex;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 6px;
+  }
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.weather {
+  display: flex;
+  width: 271px;
+  /* width: 100%; */
+  p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  p1 {
+    font-size: 18px;
+  }
+  div {
+    width: 100%;
+  }
+}
+.weatheritem {
+  display: flex;
+  gap: 5px;
+}
+.section {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.health {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    #f4f4f4 7%,
+    hsla(0, 0%, 100%, 0.220348) 17%
+  );
+  height: 396px;
+  border-radius: 5px;
+}
+.healthleft {
+  padding-left: 40px;
+  button {
+    background: #c40097;
+    background: linear-gradient(129deg, #c40097, #d6710b);
+    background-image: linear-gradient(-120deg, #e08100, #c90027);
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  h2 {
+    line-height: 36px;
+    margin: 10px 0 20px;
+    padding: 10px 30px 0 0;
+    font-size: 26px;
+  }
+  p {
+    margin: 10px 0 20 0px;
+    opacity: 0.4;
+    font-size: 13px;
+    padding-right: 15px;
+  }
+  div {
+    display: flex;
+    height: 35px;
+    width: 60px;
+    padding: 5px 10px;
+    background: #f0efef;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  svg {
+    width: 16px;
+    height: auto;
+    margin-right: 5px;
+  }
+  span {
+    font-weight: 700;
+    color: #767676;
+  }
+}
+.healthright {
+  background-image: url("https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/12/326191-19122024-1734593986-1022467717-zurag-261.jpg");
+  max-width: 554px;
+  width: 100%;
+  aspect-ratio: 554/396;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+
+  p {
+    color: #fff;
+    font-weight: 700;
+    opacity: 0;
+  }
+}
+.sectionCards {
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  gap: 13px;
+}
+.card {
+  max-width: 270px;
+  aspect-ratio: 270/283;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+}
+.card-bg {
+  width: 100%;
+  aspect-ratio: 263/175;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  p {
+    color: #fff;
+    font-weight: 700;
+    opacity: 0;
+  }
+}
+.cardtext {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 10px 0;
+}
+.cardsvg {
+  span {
+    color: #797878;
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+}
+.story {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.story > div:first-child {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.story > div:first-child span {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.stories {
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+}
+
+.storycard {
+  max-width: 173px;
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 173 / 250;
+  height: auto;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.storycard div:first-child img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.storytext {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 5px;
+  div {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 12px;
+      font-weight: 900;
+    }
+  }
+  svg {
+    fill: white;
+  }
+}
+.cardtitle {
+  height: 37px;
+  overflow: hidden;
 }
