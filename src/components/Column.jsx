@@ -1,24 +1,19 @@
 const Column = ({ combinedArray }) => {
   return (
-    <div>
+    <div className="rowright">
       <div>
         <div>
-          Өнөөдөр
           <img
-            src="https://mgl.gogo.mn//newsn/v4/images/todaynews.6ba1d8b2.png"
+            src="https://mgl.gogo.mn//newsn/v4/images/highlightnews.4812c9a7.png"
+            width="25"
             alt=""
-            width="23px"
+            style={{ height: 30 }}
           />
+          Онцлох мэдээ
         </div>
-        {combinedArray.map((props) => {
+        {combinedArray.slice(0, 4).map((props) => {
           return (
             <div>
-              <div>
-                <div>
-                  <div></div>
-                  <div>{props.date}</div>
-                </div>
-              </div>
               <div className="card">
                 <div
                   className="card-bg"
@@ -28,7 +23,7 @@ const Column = ({ combinedArray }) => {
                 </div>
                 <div>
                   <p className="cardtext">{props.title}</p>
-                  <div className="cardsvg">
+                  <div className="card2svg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -40,6 +35,14 @@ const Column = ({ combinedArray }) => {
                       />
                     </svg>
                     <span>{props.number}</span>
+                    <div>
+                      <img
+                        src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9098dcef.svg"
+                        style={{ width: 13, height: 13 }}
+                        alt=""
+                      />
+                      <p>{props.time}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -48,15 +51,6 @@ const Column = ({ combinedArray }) => {
         })}
       </div>
       <div>
-        <div>
-          <img
-            src="https://mgl.gogo.mn//newsn/v4/images/highlightnews.4812c9a7.png"
-            width="25"
-            alt=""
-            style={{ height: 30 }}
-          />
-          Онцлох мэдээ
-        </div>
         {combinedArray.slice(0, 10).map((props) => {
           return (
             <div>
