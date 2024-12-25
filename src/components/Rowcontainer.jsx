@@ -5,13 +5,13 @@ const Card = ({ image, article, title, number, time }) => {
   return (
     <div className="card2">
       <div className="card-bg2" style={{ backgroundImage: `url(${image})` }}>
-        <p>Унших</p>
+        <p className="hidden">Унших</p>
       </div>
-      <div>
-        <div>{article}</div>
-        <div className="cardtext">{title}</div>
+      <div className="cardaside">
+        <div className="boldtext">{article}</div>
+        <p className="greytext">{title}</p>
 
-        <div className="card2svg">
+        <div className="cardsvg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -23,14 +23,14 @@ const Card = ({ image, article, title, number, time }) => {
             />
           </svg>
           <span>{number}</span>
-          <div>
+          <div className="cardsvg">
             <img
               data-v-32c3e03e=""
               src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9098dcef.svg"
               style={{ width: 13 }}
               alt=""
             />
-            <p>{time}</p>
+            <span>{time}</span>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const RowContainer = () => {
           <div className="dates">
             {newsData.slice(0, 6).map((props) => (
               <div>
-                <div></div>
+                <div className="grey"></div>
                 <p>{props.day}</p>
               </div>
             ))}
@@ -71,12 +71,10 @@ const RowContainer = () => {
           ))}
 
           <img
-            src="https://cdn.boost.mn/66d672fbb1eb1b3f1bdc87e1/creative/bfe643d1-36ba-4da7-8217-521d83e28491.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=prod-boost-sa%40aqueous-cabinet-374702.iam.gserviceaccount.com%2F20241219%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20241219T122212Z&X-Goog-Expires=86399&X-Goog-Signature=34285f4678149de738e8212a8f8ff32c2bf65382cdfd4e172cf49608fbdce5c212b1bd456082f631c2aba83c1ad40f19a40b897e2e8220ae6f941d2e5f270215fce63514516e0e9ee293a49780d5741401fcdd51d47a03019c55b3f97ca3c34cea727091d313937f89a4ca5997030795061b6488422265db58ad130a46b19e733623540595fd5e40041d32f37c4249fc30683c9944ce0682006de18f0b5ebf756398ae7f3dbdcc596a1b5e7c93efee56f68290980b73fd00dccc3d27170c33298edbba9019f2a08c3904a9a164c1667f39a898178797a856d972affea31ebdeeb21f3f279b6c289f05b3a2829528a95e828197240f2f2e2c4760603bec7c2738&X-Goog-SignedHeaders=host"
+            src="https://mgl.gogo.mn/banner_gogo/banner/2024/12/09/news-b3/videourl/1733736457/760%20270%20gogo.png"
             alt=""
             style={{
-              width: "100%",
-              maxWidth: "780px",
-              aspectRatio: "780/126",
+              height: "245px",
               marginBottom: "22px",
             }}
           />

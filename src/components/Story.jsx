@@ -3,7 +3,7 @@ const Story = (props) => {
   return (
     <div className="content">
       <div className="story">
-        <div>
+        <div className="bluespan">
           GoGo
           <span>СТОРИ</span>
         </div>

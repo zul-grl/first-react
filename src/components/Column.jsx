@@ -1,17 +1,17 @@
 const Column = ({ combinedArray }) => {
   return (
     <div className="rowright">
-      <div>
-        <div>
+      <div className="column-top">
+        <div className="special">
           <img
             src="https://mgl.gogo.mn//newsn/v4/images/highlightnews.4812c9a7.png"
             width="25"
             alt=""
             style={{ height: 30 }}
           />
-          Онцлох мэдээ
+          <p>Онцлох мэдээ</p>
         </div>
-        {combinedArray.slice(0, 4).map((props) => {
+        {combinedArray.slice(10, 14).map((props) => {
           return (
             <div>
               <div className="card">
@@ -22,8 +22,8 @@ const Column = ({ combinedArray }) => {
                   <p>{props.text}</p>
                 </div>
                 <div>
-                  <p className="cardtext">{props.title}</p>
-                  <div className="card2svg">
+                  <p className="sidebar">{props.title}</p>
+                  <div className="cardsvg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -35,13 +35,13 @@ const Column = ({ combinedArray }) => {
                       />
                     </svg>
                     <span>{props.number}</span>
-                    <div>
+                    <div className="cardsvg">
                       <img
                         src="https://mgl.gogo.mn//newsn/v4/images/time-gray.9098dcef.svg"
                         style={{ width: 13, height: 13 }}
                         alt=""
                       />
-                      <p>{props.time}</p>
+                      <span>{props.time}</span>
                     </div>
                   </div>
                 </div>
