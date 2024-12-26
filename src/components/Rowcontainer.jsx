@@ -1,11 +1,12 @@
 import Column from "./Column";
 import { newsData, articles, combinedArray } from "../arrays/row";
+import Slider from "./Slider";
 
 const Card = ({ image, article, title, number, time }) => {
   return (
     <div className="card2">
       <div className="card-bg2" style={{ backgroundImage: `url(${image})` }}>
-        <p className="hidden">Унших</p>
+        <p className="hidden">Унших →</p>
       </div>
       <div className="cardaside">
         <div className="boldtext">{article}</div>
@@ -53,7 +54,7 @@ const RowContainer = () => {
           </div>
           <div className="dates">
             {newsData.slice(0, 6).map((props) => (
-              <div>
+              <div className="day">
                 <div className="grey"></div>
                 <p>{props.day}</p>
               </div>
@@ -69,17 +70,9 @@ const RowContainer = () => {
               time={medee.time}
             />
           ))}
+          <Slider />
 
-          <img
-            src="https://mgl.gogo.mn/banner_gogo/banner/2024/12/09/news-b3/videourl/1733736457/760%20270%20gogo.png"
-            alt=""
-            style={{
-              height: "245px",
-              marginBottom: "22px",
-            }}
-          />
-
-          {articles.slice(3, 12).map((medee) => (
+          {articles.slice(3, 15).map((medee) => (
             <Card
               image={medee.image}
               article={medee.article}
@@ -89,7 +82,14 @@ const RowContainer = () => {
             />
           ))}
 
-          <div>Илүү үзэх</div>
+          <div className="more">
+            Илүү үзэх{" "}
+            <img
+              src="https://mgl.gogo.mn//newsn/v4/images/more.50d348c2.png"
+              alt=""
+              style={{ width: "17px" }}
+            />
+          </div>
         </div>
 
         <Column combinedArray={combinedArray} />

@@ -119,139 +119,7 @@ export const newsData = [
       "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
   },
 ];
-export const cardarr = [
-  {
-    text: "унших",
-    title: "Зарим газраар цас орж, шуурнаа",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2024/11/-08112024-1731022949-1997003339-251396-20022020-1582157098-441564515-tsasan_shuurga1.jpeg",
 
-    number: "0",
-    time: "16 минутын өмнө",
-  },
-  {
-    text: "унших",
-    title: "№1: Сурагчдын амралтаар очин хөгжилдөж болох үнэ төлбөргүй газар",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/12/326299-23122024-1734953054-217104021-musun.jpg",
-    number: "0",
-    time: "Өчигдөр",
-  },
-  {
-    text: "унших",
-    title: "Болз, аял, ажлаа хий: 0-2 насны хүүхэд асрах VIP төв нээгдлээ",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/12/326300-23122024-1734952199-1798102449-cover.jpg",
-
-    number: "0",
-    time: "Өчигдөр",
-  },
-  {
-    text: "унших",
-    title:
-      "Шахмал түлшний барьцалдуулагчийг дотоодын ямар компаниуд нийлүүлж байв?",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/12/326281-23122024-1734933510-714045528-MixCollage-23-Dec-2024-01-57-PM-27301.jpg",
-
-    number: "0",
-    time: "Өчигдөр",
-  },
-  {
-    text: "унших",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/326228-20122024-1734675686-1718261107-7.jpg",
-    title:
-      "Л.Оюун-Эрдэнэ: Иргэн бүр 350 мянган төгрөгийн ногдол ашиг хүртэх боломж бүрдсэн",
-
-    number: "501",
-    time: " 1 цагийн өмнө",
-  },
-  {
-    text: "унших",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/-20122024-1734662229-860155718-mobi_nuur2.jpg",
-    title:
-      "Дэлхийн 200 гаруй улсад ашиглаж болох Global Data eSim-ний талаар та юу мэдэх ёстой вэ",
-
-    number: "3",
-    time: " 10 цагийн өмнө",
-  },
-  {
-    text: "унших",
-    image:
-      "https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2024/12/-20122024-1734668987-2102376822-odontuya1.jpeg",
-    title:
-      "С.Одонтуяа: Багануурын уурхайг түшиглэн коксжсон буюу хөх нүүрсний үйлдвэр байгуулна",
-
-    number: "72",
-    time: " 4 цагийн өмнө",
-  },
-];
-export const combinedArray = [...newsData, ...cardarr];
-export const storyithem = [
-  {
-    img: "https://mgl.gogo.mn/newsn/story/mobicom-dotor-6764d99535db4822975842.jpg",
-    text: "Дэлхийн 200 гаруй улсад ашиглаж болох Global Data eSim-ний талаар та юу мэдэх ёстой вэ",
-    Number: "72",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/zurag-29-154219-467089760-6764cd4312901885474402.jpeg",
-    text: "Хөрсөнд ургасан бүхэн органик биш",
-    Number: "97",
-  },
-
-  {
-    img: "https://mgl.gogo.mn/newsn/story/1-3-6764cce61c0dd664440065.jpeg",
-    text: "Японы Фүкүшима хот хогоо ангилж хаяагүй иргэдийн нэрийг нийтэд мэдээлдэг болно",
-    Number: "105",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/nomiinbayr-10-134724-18453572541-6764cc8ceec15160327054.jpeg",
-    text: "Хүүхэд эхний удаа уншихад 20, хоёр дахиа уншихад 68 хувьтай ойлгодог&quot;",
-    Number: "104",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/tog-togtasralt-18-161219-13007780191-6764cc12c64dd561938572.jpeg",
-    text: "ФОТО: Хэзээ бид өвлийг тогтой, утаагүй, түгжрэлгүй, гантиг зам дээр уначихгүй давах бол",
-    Number: "119",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/picture3-6763bb4641451633437386.jpg",
-    text: "Эвсэг брэнд 60% хүртэл шинэ жилийн хямдралт худалдаа зарлалаа",
-    Number: "311",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/mobicom-dotor-6764d99535db4822975842.jpg",
-    text: "Дэлхийн 200 гаруй улсад ашиглаж болох Global Data eSim-ний талаар та юу мэдэх ёстой вэ",
-    Number: "72",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/zurag-29-154219-467089760-6764cd4312901885474402.jpeg",
-    text: "Хөрсөнд ургасан бүхэн органик биш",
-    Number: "97",
-  },
-
-  {
-    img: "https://mgl.gogo.mn/newsn/story/1-3-6764cce61c0dd664440065.jpeg",
-    text: "Японы Фүкүшима хот хогоо ангилж хаяагүй иргэдийн нэрийг нийтэд мэдээлдэг болно",
-    Number: "105",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/nomiinbayr-10-134724-18453572541-6764cc8ceec15160327054.jpeg",
-    text: "Хүүхэд эхний удаа уншихад 20, хоёр дахиа уншихад 68 хувьтай ойлгодог",
-    Number: "104",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/tog-togtasralt-18-161219-13007780191-6764cc12c64dd561938572.jpeg",
-    text: "ФОТО: Хэзээ бид өвлийг тогтой, утаагүй, түгжрэлгүй, гантиг зам дээр уначихгүй давах бол",
-    Number: "119",
-  },
-  {
-    img: "https://mgl.gogo.mn/newsn/story/picture3-6763bb4641451633437386.jpg",
-    text: "Эвсэг брэнд 60% хүртэл шинэ жилийн хямдралт худалдаа зарлалаа",
-    Number: "311",
-  },
-];
 export const articles = [
   {
     article: "Зарим газраар цас орж, шуурнаа",
@@ -276,7 +144,7 @@ export const articles = [
     image:
       "https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2024/12/326300-23122024-1734952199-1798102449-cover.jpg",
     title:
-      "айртай бүхнээ халамжил уриатай “Хаппи Фловерс”  компанийн хамт олон 0-2 насны хүүхэдтэй эцэг эхчүүдэд зориулан шинэ үйлчилгээгээ “Хүннү 2222” хороололд нээлээ.",
+      "Xайртай бүхнээ халамжил уриатай “Хаппи Фловерс”  компанийн хамт олон 0-2 насны хүүхэдтэй эцэг эхчүүдэд зориулан шинэ үйлчилгээгээ “Хүннү 2222” хороололд нээлээ.",
     number: "0",
     time: "Өчигдөр",
   },
@@ -397,3 +265,5 @@ export const articles = [
     time: "Өчигдөр",
   },
 ];
+export const combinedArray = [...newsData, ...articles];
+

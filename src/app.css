@@ -34,6 +34,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     margin-right: 6px;
+    transition: all 0.5s ease;
   }
 }
 .arrow {
@@ -77,6 +78,9 @@ body {
   height: 396px;
   border-radius: 5px;
 }
+.yellow:hover {
+  padding: 8px 20px;
+}
 .healthleft {
   padding-left: 40px;
   button {
@@ -89,6 +93,7 @@ body {
     padding: 8px 15px;
     font-weight: 600;
     font-size: 12px;
+    transition: all 0.5s ease;
   }
   h2 {
     line-height: 36px;
@@ -167,11 +172,6 @@ body {
   background-size: cover;
   border-radius: 5px;
   overflow: hidden;
-  p {
-    color: #fff;
-    font-weight: 700;
-    opacity: 0;
-  }
 }
 .cardtext {
   font-weight: 600;
@@ -225,26 +225,34 @@ body {
   margin-bottom: 30px;
 }
 
+.cardtitle {
+  max-height: 38px;
+  overflow: hidden;
+  font-size: 13px;
+  transition: all 0.4s ease-in-out;
+}
+.storycard:hover .cardtitle {
+  max-height: 100px;
+}
 .storycard {
   max-width: 173px;
   flex: 0 0 auto;
   width: 100%;
+  background-size: 100%;
   aspect-ratio: 173 / 250;
   height: auto;
   border-radius: 5px;
-  background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 10px;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  p {
-    font-size: 14px;
-    margin: 0;
-  }
+  transition: all 0.5s ease;
+}
+
+.storycard:hover {
+  background-size: 110%;
 }
 
 .storycard div:first-child img {
@@ -261,21 +269,19 @@ body {
   flex-direction: column;
   gap: 5px;
   margin-top: 5px;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
   div {
     display: flex;
     align-items: center;
-    p {
-      font-size: 12px;
-      font-weight: 900;
-    }
   }
   svg {
     fill: white;
   }
 }
-.cardtitle {
-  height: 42px;
-  overflow: hidden;
+.boldeye {
+  font-size: 12px;
+  font-weight: 900;
 }
 .rowcontainer {
   display: flex;
@@ -306,9 +312,25 @@ body {
   height: 7px;
   background-color: #efefef;
   border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.day {
+  transition: all 0.5s ease;
+}
+.day:hover {
+  transform: translateY(-4px);
+}
+.day:hover .grey {
+  background-color: #407ce8;
+}
+.day:hover p {
+  color: #407ce8;
 }
 .dates div:first-child div {
   background-color: #407ce8;
+}
+.dates div:first-child p {
+  color: #407ce8;
 }
 .bluetext {
   display: flex;
@@ -325,15 +347,24 @@ body {
   max-width: 410px;
   width: 100%;
 }
-.column-top {
-  padding-left: 120px;
-}
 .rowleft {
   width: 100%;
 }
 .card2 {
   display: flex;
   margin-bottom: 30px;
+}
+.columncard {
+  width: 100%;
+  aspect-ratio: 290/170;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.columnitem {
+  margin-bottom: 30px;
+  height: 245px;
 }
 .card-bg2 {
   width: 210px;
@@ -362,6 +393,12 @@ body {
   color: #888;
   margin: 10px 0 15px;
 }
+.greytext2 {
+  height: 46px;
+  overflow: hidden;
+  color: black;
+  margin-top: 10px;
+}
 .sidebar {
   font-size: 15px;
 }
@@ -388,8 +425,10 @@ body {
   gap: 4px;
 }
 .news-feed {
+  margin-top: 60px;
   .news-layout {
     display: flex;
+    height: 514px;
     gap: 20px;
     .gradient {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
@@ -403,7 +442,9 @@ body {
       flex-direction: column;
       justify-content: end;
       background-position: center;
-      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all 0.5s ease;
+      background-size: 200%;
     }
     .large-card {
       max-width: 542px;
@@ -450,8 +491,8 @@ body {
       gap: 20px;
 
       .small-card {
-        max-width: 263px;
-        aspect-ratio: 263/243;
+        max-width: 268px;
+        aspect-ratio: 268/243;
         width: 100%;
 
         img {
@@ -507,7 +548,7 @@ body {
     margin-bottom: 20px;
     border-radius: 4px;
     overflow: hidden;
-    width: 264px;
+    width: 268px;
     height: 360px;
     .catocard-bg {
       height: 230px;
@@ -565,13 +606,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
+  margin-top: 7px;
 }
 .comiccard {
   margin-bottom: 20px;
   border-radius: 4px;
   overflow: hidden;
-  width: 542px;
-  height: 360px;
+  width: 550px;
 }
 
 .comic-card-bg {
@@ -613,4 +654,153 @@ footer {
   svg {
     fill: rgba(0, 0, 0, 0.229);
   }
+}
+.ent {
+  background-color: #1a1a1a;
+  margin: 60px 0 0;
+  padding: 50px 0 0;
+}
+.ent-card {
+  max-width: 270px;
+  aspect-ratio: 270/283;
+  width: 100%;
+  position: relative;
+}
+.ent-img {
+  position: absolute;
+  width: 45px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: 10;
+}
+.ent-row {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 50px;
+}
+.column-bottom {
+  margin-top: 50px;
+  max-width: 340px;
+  margin-left: -50px;
+  background-color: #fdfaf5;
+  h2 {
+    padding: 30px 50px 10px;
+  }
+}
+.more {
+  background: #f8f8f8;
+  border: 1px solid #f2f2f2;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+.rowright {
+  padding-left: 120px;
+}
+.flexnum {
+  display: flex;
+  padding-bottom: 40px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+.flexnum:hover {
+  transform: scale(1.04);
+}
+.flexnum:hover p {
+  color: #888;
+}
+.number {
+  font-weight: 700;
+  color: #e00034;
+  font-size: 46px;
+  line-height: 46px;
+  margin-right: 15px;
+}
+.asidetext {
+  padding: 0 50px 50px 50px;
+}
+div:has(> .hidden) {
+  background-size: 130%;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+div:has(> .hidden):hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+div:has(> .hidden):hover {
+  background-size: 140%;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  position: relative;
+}
+
+div:has(> .hidden):hover .hidden {
+  opacity: 1;
+}
+.arrow p:hover {
+  color: #888;
+}
+.large-card:hover {
+  background-size: 250%;
+}
+.small-card:hover {
+  background-size: 250%;
+}
+.ads {
+  display: flex;
+  margin-bottom: 22px;
+  max-width: 690px;
+  aspect-ratio: 690/245;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.dotcontainer {
+  display: flex;
+  gap: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 6px;
+}
+.dot {
+  margin-left: 3px;
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  /* background: #0159f0; */
+  opacity: 0.5;
+  cursor: pointer;
 }

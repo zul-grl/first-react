@@ -1,9 +1,10 @@
-import { storyithem } from "../arrays/row";
-const Entcard = ({ image, text, number }) => {
+import { entarr } from "../arrays/entertainment";
+const Entcard = ({ image, text, number, icon }) => {
   return (
-    <div className="card">
+    <div className="ent-card">
+      <img className="ent-img" src={icon} alt="" />
       <div className="card-bg" style={{ backgroundImage: `url(${image})` }}>
-        <p>Унших</p>
+        <p className="hidden">Унших →</p>
       </div>
       <div>
         <p className="cardtext2">{text}</p>
@@ -22,26 +23,37 @@ const Entcard = ({ image, text, number }) => {
 };
 const Entertainment = (props) => {
   return (
-    <div style={{ backgroundColor: "#1a1a1a" }}>
+    <div className="ent">
       <div className="content">
-        <div>
+        <h2 className="imgtitle" style={{ color: "white" }}>
           {" "}
-          {storyithem.slice(0, 4).map((medee) => (
+          <img
+            src="https://mgl.gogo.mn//newsn/v4/images/play-btn.12e64771.svg"
+            style={{ width: "30px" }}
+            alt=""
+          />{" "}
+          Үзэх
+        </h2>
+        <div className="ent-row">
+          {" "}
+          {entarr.slice(0, 4).map((medee) => (
             <Entcard
               image={medee.img}
               text={medee.text}
               title={medee.title}
               number={medee.Number}
+              icon={medee.icon}
             />
           ))}
         </div>
-        <div>
-          {storyithem.slice(0, 4).map((medee) => (
+        <div className="ent-row">
+          {entarr.slice(4, 8).map((medee) => (
             <Entcard
               image={medee.img}
               text={medee.text}
               title={medee.title}
               number={medee.Number}
+              icon={medee.icon}
             />
           ))}
         </div>
