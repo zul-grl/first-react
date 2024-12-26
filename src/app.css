@@ -167,7 +167,9 @@ body {
 }
 .card-bg {
   width: 100%;
-  aspect-ratio: 263/175;
+  aspect-ratio: 263/180;
+  max-height: 180px;
+  height: 100%;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -221,8 +223,9 @@ body {
 .stories {
   display: flex;
   gap: 15px;
-  overflow-x: scroll;
-  margin-bottom: 30px;
+  /* overflow-x: scroll; */
+  padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .cardtitle {
@@ -232,7 +235,7 @@ body {
   transition: all 0.4s ease-in-out;
 }
 .storycard:hover .cardtitle {
-  max-height: 100px;
+  max-height: 150px;
 }
 .storycard {
   max-width: 173px;
@@ -271,6 +274,7 @@ body {
   margin-top: 5px;
   padding: 10px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+  border-radius: 5px;
   div {
     display: flex;
     align-items: center;
@@ -424,6 +428,7 @@ body {
   display: flex;
   gap: 4px;
 }
+
 .news-feed {
   margin-top: 60px;
   .news-layout {
@@ -444,18 +449,24 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       transition: all 0.5s ease;
-      background-size: 200%;
     }
     .large-card {
       max-width: 542px;
       width: 100%;
       aspect-ratio: 542/500;
+      transition: all 0.5s ease;
 
       img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
         border-radius: 8px;
+      }
+      .title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+        max-height: 62px;
       }
 
       .tag {
@@ -467,12 +478,6 @@ body {
         padding: 2px 5px;
         border-radius: 3px;
         margin-bottom: 5px;
-      }
-
-      .title {
-        color: #fff;
-        font-weight: 700;
-        font-size: 20px;
       }
 
       .detail {
@@ -489,6 +494,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      transition: all 0.5s ease;
 
       .small-card {
         max-width: 268px;
@@ -512,18 +518,17 @@ body {
           border-radius: 3px;
           margin-bottom: 5px;
         }
-
-        .title {
-          max-height: 62px;
-          overflow: hidden;
-          transition: all 0.2s ease-in-out;
-          color: #fff;
-          font-weight: 500;
-          font-size: 13px;
-        }
       }
     }
   }
+}
+.title {
+  max-height: 62px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
 }
 .categoryheader {
   display: flex;
@@ -655,6 +660,9 @@ footer {
     fill: rgba(0, 0, 0, 0.229);
   }
 }
+.svgs svg:hover {
+  fill: black;
+}
 .ent {
   background-color: #1a1a1a;
   margin: 60px 0 0;
@@ -771,10 +779,22 @@ div:has(> .hidden):hover .hidden {
   color: #888;
 }
 .large-card:hover {
-  background-size: 250%;
+  background-size: 200%;
+  .tag {
+    opacity: 0.8;
+  }
+  .title {
+    opacity: 0.7;
+  }
+}
+.small-card:hover .title {
+  max-height: 200px;
 }
 .small-card:hover {
   background-size: 250%;
+  .tag {
+    opacity: 0.8;
+  }
 }
 .ads {
   display: flex;
@@ -800,7 +820,6 @@ div:has(> .hidden):hover .hidden {
   height: 8px;
   border: none;
   border-radius: 50%;
-  /* background: #0159f0; */
   opacity: 0.5;
   cursor: pointer;
 }
