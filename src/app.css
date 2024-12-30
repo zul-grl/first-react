@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #fff;
   font: normal 14px / 22px Helvetica Neue, sans-serif, Arial;
@@ -44,8 +43,7 @@ body {
 }
 .weather {
   display: flex;
-  width: 271px;
-  /* width: 100%; */
+  width: 271px; /* width: 100%; */
   p:first-child {
     font-size: 12px;
     margin-bottom: 5px;
@@ -58,7 +56,6 @@ body {
     width: 100%;
   }
 }
-
 .weatheritem {
   display: flex;
   gap: 5px;
@@ -146,7 +143,6 @@ body {
   font-weight: 700;
   opacity: 0;
 }
-
 .sectionCards {
   display: flex;
   margin-top: 30px;
@@ -167,9 +163,7 @@ body {
 }
 .card-bg {
   width: 100%;
-  aspect-ratio: 263/180;
-  max-height: 180px;
-  height: 100%;
+  aspect-ratio: 263/175;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -199,7 +193,6 @@ body {
   max-width: 1200px;
   width: 100%;
 }
-
 .bluespan {
   font-size: 24px;
   font-weight: bold;
@@ -207,7 +200,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .bluespan span {
   margin-left: 10px;
   font-size: 12px;
@@ -219,15 +211,13 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
-
 .stories {
   display: flex;
   gap: 15px;
   /* overflow-x: scroll; */
-  padding-bottom: 30px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
-
 .cardtitle {
   max-height: 38px;
   overflow: hidden;
@@ -235,7 +225,7 @@ body {
   transition: all 0.4s ease-in-out;
 }
 .storycard:hover .cardtitle {
-  max-height: 150px;
+  max-height: 100px;
 }
 .storycard {
   max-width: 173px;
@@ -253,11 +243,9 @@ body {
   color: white;
   transition: all 0.5s ease;
 }
-
 .storycard:hover {
   background-size: 110%;
 }
-
 .storycard div:first-child img {
   position: absolute;
   top: 10px;
@@ -266,15 +254,14 @@ body {
   background: white;
   padding: 5px;
 }
-
 .storytext {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-top: 5px;
+  border-radius: 5px;
   padding: 10px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
-  border-radius: 5px;
   div {
     display: flex;
     align-items: center;
@@ -296,7 +283,6 @@ body {
   width: 100%;
   max-width: 800px;
   margin-bottom: 40px;
-
   p {
     color: #b7b6b6;
     font-size: 13px;
@@ -374,11 +360,6 @@ body {
   width: 210px;
   height: 150px;
   border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .cardaside {
   padding-left: 30px;
@@ -428,7 +409,6 @@ body {
   display: flex;
   gap: 4px;
 }
-
 .news-feed {
   margin-top: 60px;
   .news-layout {
@@ -449,26 +429,19 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       transition: all 0.5s ease;
+      background-size: 200%;
     }
     .large-card {
       max-width: 542px;
-      width: 100%;
+      width: calc(50%-10px);
       aspect-ratio: 542/500;
-      transition: all 0.5s ease;
-
+      flex-shrink: 1;
       img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
         border-radius: 8px;
       }
-      .title {
-        color: #fff;
-        font-weight: 700;
-        font-size: 20px;
-        max-height: 62px;
-      }
-
       .tag {
         background-color: #407ce8;
         display: inline-block;
@@ -479,7 +452,11 @@ body {
         border-radius: 3px;
         margin-bottom: 5px;
       }
-
+      .title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+      }
       .detail {
         margin-top: 10px;
         font-size: 10px;
@@ -489,25 +466,25 @@ body {
         margin-top: 10px;
       }
     }
-
     .small-cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      transition: all 0.5s ease;
-
+      max-height: 514px;
+      width: calc(50% - 10px);
       .small-card {
         max-width: 268px;
         aspect-ratio: 268/243;
         width: 100%;
-
+        box-sizing: border-box;
+        max-height: 243px;
+        width: calc(50% - 10px);
         img {
           width: 100%;
           height: auto;
           margin-bottom: 10px;
           border-radius: 8px;
         }
-
         .tag {
           background-color: #407ce8;
           display: inline-block;
@@ -518,17 +495,17 @@ body {
           border-radius: 3px;
           margin-bottom: 5px;
         }
+        .title {
+          max-height: 62px;
+          overflow: hidden;
+          transition: all 0.2s ease-in-out;
+          color: #fff;
+          font-weight: 500;
+          font-size: 13px;
+        }
       }
     }
   }
-}
-.title {
-  max-height: 62px;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  color: #fff;
-  font-weight: 500;
-  font-size: 13px;
 }
 .categoryheader {
   display: flex;
@@ -537,18 +514,15 @@ body {
 .category-icon {
   margin-left: 10px;
 }
-
 .category-section {
   width: 100%;
   display: flex;
   gap: 15px;
-
   .category-subtitle {
     font-weight: normal;
     color: #888;
     margin-left: 5px;
   }
-
   .catocard {
     margin-bottom: 20px;
     border-radius: 4px;
@@ -597,7 +571,6 @@ body {
   border-top: 1px solid #f1f1f1;
   padding-top: 5px;
   margin-top: 5px;
-
   img {
     width: 12px;
     height: 12px;
@@ -619,7 +592,6 @@ body {
   overflow: hidden;
   width: 550px;
 }
-
 .comic-card-bg {
   height: 150px;
   background-size: cover;
@@ -637,7 +609,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 0 30px;
-
   div {
     display: flex;
   }
@@ -659,9 +630,6 @@ footer {
   svg {
     fill: rgba(0, 0, 0, 0.229);
   }
-}
-.svgs svg:hover {
-  fill: black;
 }
 .ent {
   background-color: #1a1a1a;
@@ -746,8 +714,9 @@ div:has(> .hidden) {
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
 }
-
 div:has(> .hidden):hover::before {
   content: "";
   position: absolute;
@@ -760,18 +729,15 @@ div:has(> .hidden):hover::before {
   overflow: hidden;
   border-radius: 5px;
 }
-
 div:has(> .hidden):hover {
   background-size: 140%;
 }
-
 .hidden {
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
   position: relative;
 }
-
 div:has(> .hidden):hover .hidden {
   opacity: 1;
 }
@@ -779,22 +745,10 @@ div:has(> .hidden):hover .hidden {
   color: #888;
 }
 .large-card:hover {
-  background-size: 200%;
-  .tag {
-    opacity: 0.8;
-  }
-  .title {
-    opacity: 0.7;
-  }
-}
-.small-card:hover .title {
-  max-height: 200px;
+  background-size: 250%;
 }
 .small-card:hover {
   background-size: 250%;
-  .tag {
-    opacity: 0.8;
-  }
 }
 .ads {
   display: flex;
@@ -805,7 +759,6 @@ div:has(> .hidden):hover .hidden {
   background-position: center;
   background-size: cover;
 }
-
 .dotcontainer {
   display: flex;
   gap: 4px;
